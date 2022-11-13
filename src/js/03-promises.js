@@ -9,8 +9,8 @@ formRef.addEventListener('submit', onBtnClick);
 
 function onBtnClick (event){
   event.preventDefault();
-  let delayRef = Number(formRef.delay.value);
-  let stepRef = Number(formRef.step.value);
+  let delayRef = Number(firstDelayRef.value);
+  let stepRef = Number(delayStepRef.value);
   for (let i = 1; i <= amountRef.value; i += 1){
     createPromise (i, delayRef)
        .then(({ position, delay }) => {
@@ -36,3 +36,5 @@ function createPromise(position, delay) {
     });
   };
   
+
+

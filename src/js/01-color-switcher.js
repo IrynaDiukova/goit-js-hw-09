@@ -9,6 +9,7 @@ function getRandomHexColor() {
 
 
 btnStart.addEventListener('click', () => {
+  btnStart.disabled = true;
   interval = setInterval(() => {
    document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
